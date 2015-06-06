@@ -9,17 +9,11 @@ Template.line.helpers({
   },
   lineAlerts: function(){
     var directions = this.directions;
-    var anyAlerts = false;
     for (var i = 0; i < directions.length; i++) {
       var path = directions[i].path
-      var path_reports = Reports.find({
+      return Reports.find({
         expired: false,
         line: path
       }).count();
-      if (path_reports) {
-        anyAlerts = true;
-      }
-    };
-    return anyAlerts;
   }
 });
