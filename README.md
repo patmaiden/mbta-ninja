@@ -27,7 +27,7 @@ Next, make the heroku app:
 
 	heroku create <app_name>
 
-<app_name> is optional and can be whatever you want it to be. A crazy name you can change later will be created if you choose not to supply a name.
+app_name is optional and can be whatever you want it to be. A crazy name you can change later will be created if you choose not to supply a name.
 
 ### Set the buildpack
 
@@ -65,7 +65,7 @@ Make sure at least one instance is running:
 	
 	heroku ps:scale web=1
 
-Once you are done, your app should be ready at <app_name>.herokuapp.com! You can quickly open it by running:
+Once you are done, your app should be ready at app_name.herokuapp.com! You can quickly open it by running:
 	
 	heroku open
 
