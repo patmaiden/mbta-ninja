@@ -1,7 +1,0 @@
-{
-  "name": "Septa-ninja",
-  "description": "A barebones Node.js app for septa-ninja",
-  "repository": "https://github.com/patmaiden/septa-ninja",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"]
-}
