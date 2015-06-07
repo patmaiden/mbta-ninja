@@ -5,7 +5,7 @@
         <label for="nameInput"> Report Type: </label>
         <select id="nameInput">
           {{#each reportTypes}}
-            <option value="{{name}}">{{name}}</option>
+            <option value="{{name}}|{{category}}">{{name}}</option>
           {{/each}}
         </select>
         <label for="locationInput"> Location: </label>

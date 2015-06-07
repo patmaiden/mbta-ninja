@@ -2,16 +2,22 @@
   <li class="line">
   <div class="collapsible-header"><i class="mdi-maps-directions-{{type}} subway-icon {{color}}"></i>{{line}}
   <span class="secondary-content">
-    {{#if lineAlerts}}
-      <i class="mdi-alert-warning red-text"></i>
+    {{#if lineAlerts station}}
+      <i class="mdi-alert-warning orange-text"></i>
+    {{/if}}
+    {{#if lineAlerts service}}
+      <i class="mdi-device-access-time red-text"></i>
     {{/if}}
     <i class="mdi-navigation-expand-more grey-text lighten-2"></i></span>
   </div>
     {{#each directions}}
       <div class="collapsible-body">
         <a href="{{pathFor 'line.show' line=path type=../type}}">{{direction}}
-        {{#if numberReports}}
-          <i class="mdi-alert-warning red-text"></i>
+        {{#if numberReports station}}
+          <i class="mdi-alert-warning orange-text"></i>
+        {{/if}}
+        {{#if numberReports service}}
+          <i class="mdi-device-access-time red-text"></i>
         {{/if}}
         <span class="secondary-content"><i class="mdi-navigation-chevron-right black-text"></i></span></a>
       </div>

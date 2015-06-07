@@ -13,7 +13,9 @@ Template.createReport.events({
   'click .submit': function() {
     // Gather imputs from form
     var nameInput = $('#nameInput');
-    var name = nameInput.val();
+    var res = nameInput.val().split("|");
+    var name = res[0];
+    var type = res[1];
     var locationInput = $('#locationInput');
     var location = locationInput.val();
     var line = currentLine();
@@ -33,7 +35,7 @@ Template.createReport.events({
         Session.setPersistent(existingReport._id, 'upvoted');
       }
     } else { // Create a new report
-      Meteor.call("saveReport", name, location, line, function(err, report) {
+      Meteor.call("saveReport", name, type, location, line, function(err, report) {
         // Avoid future upvotes
         Session.setPersistent(report, 'created');
       });

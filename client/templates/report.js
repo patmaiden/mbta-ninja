@@ -7,8 +7,14 @@ canUpvote = function(docId) {
 
 Template.report.helpers({
   canUpvote: canUpvote,
-  positive: function(reportName) {
-    return (reportName === 'Normal conditions');
+  normal: function(reportType) {
+    return (reportType === 'normal');
+  },
+  stationIssue: function(reportType) {
+    return (reportType === 'station');
+  },
+  serviceIssue: function(reportType) {
+    return (reportType === 'service');
   }
 });
 
