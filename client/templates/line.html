@@ -8,18 +8,25 @@
     {{#if lineAlerts service}}
       <i class="mdi-device-access-time red-text"></i>
     {{/if}}
-    <i class="mdi-navigation-expand-more grey-text lighten-2"></i></span>
+    {{#unless lineAlerts}}
+      <i class="mdi-navigation-expand-more grey-text lighten-2"></i>
+    {{/unless}}
+      </span>
   </div>
     {{#each directions}}
       <div class="collapsible-body">
         <a href="{{pathFor 'line.show' line=path type=../type}}">{{direction}}
+        <span class="secondary-content">
         {{#if numberReports station}}
           <i class="mdi-alert-warning orange-text"></i>
         {{/if}}
         {{#if numberReports service}}
           <i class="mdi-device-access-time red-text"></i>
         {{/if}}
-        <span class="secondary-content"><i class="mdi-navigation-chevron-right black-text"></i></span></a>
+        {{#unless numberReports}}
+          <i class="mdi-navigation-chevron-right black-text"></i>
+        {{/unless}}
+        </span></a>
       </div>
     {{/each}}
   </li>
