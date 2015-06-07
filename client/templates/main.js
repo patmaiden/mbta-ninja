@@ -10,7 +10,9 @@ Template.main.helpers({
   noReports: function() {
     return numReports(currentLine()) === 0;
   },
-  numReports: function() {
+  oneReport: function() {
+    return numReports(currentLine()) === 1;
+  },numReports: function() {
     return numReports(currentLine());
   },
   lineColor: function() {

@@ -24,11 +24,19 @@
     </div>
   {{else}}
     <div class="top-panel card-panel red white-text">
-      <img src="/images/ninja.png" class="top-panel-ninja" />
-      <div class="top-panel-text">
-        {{numReports}} incidents at
-        <span id="current-time"></span>
-      </div>
+      {{#if oneReport}}
+        <img src="/images/ninja.png" class="top-panel-ninja" />
+        <div class="top-panel-text">
+          {{numReports}} incident at
+          <span id="current-time"></span>
+        </div>
+      {{else}}
+        <img src="/images/ninja.png" class="top-panel-ninja" />
+        <div class="top-panel-text">
+          {{numReports}} incidents at
+          <span id="current-time"></span>
+        </div>
+      {{/if}}
     </div>
   {{/if}}
 
