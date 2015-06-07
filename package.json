@@ -1,0 +1,23 @@
+{
+  "name": "septa-ninja",
+  "version": "1.0.0",
+  "description": "SEPTA-ninja deployment ",
+  "main": "mobile-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patmaiden/septa-ninja.git"
+  },
+  "keywords": [
+    "septa",
+    "heroku"
+  ],
+  "author": "pat-maiden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patmaiden/septa-ninja/issues"
+  },
+  "homepage": "https://github.com/patmaiden/septa-ninja#readme"
+}
