@@ -35,10 +35,28 @@ Template.createReport.events({
         Session.setPersistent(existingReport._id, 'upvoted');
       }
     } else { // Create a new report
-      Meteor.call("saveReport", name, type, location, line, function(err, report) {
-        // Avoid future upvotes
-        Session.setPersistent(report, 'created');
-      });
+      if (type == 'station'){
+        lineList = listOfLines();
+        stationMap = getStations();
+        for(stationDir in stationMap){// each line
+            for(loc = 0;loc < stationMap[stationDir].length; loc++){// each line
+              if (stationMap[stationDir][loc]['name'] == location){
+                console.log(stationDir);
+                console.log(stationMap[stationDir][loc]['name']);
+                Meteor.call("saveReport", name, type, location, stationDir, function(err, report) {
+                // Avoid future upvotes
+                Session.setPersistent(report, 'created');
+                });
+              }
+            }
+            
+        }
+      } else{
+         Meteor.call("saveReport", name, type, location, line, function(err, report) {
+          // Avoid future upvotes
+          Session.setPersistent(report, 'created');
+        });
+      }
     }
     toast("Thanks for your report!", 2000);
   }
