@@ -8,9 +8,7 @@
     {{#if lineAlerts service}}
       <i class="mdi-device-access-time red-text"></i>
     {{/if}}
-    {{#unless lineAlerts}}
       <i class="mdi-navigation-expand-more grey-text lighten-2"></i>
-    {{/unless}}
       </span>
   </div>
     {{#each directions}}
@@ -23,9 +21,7 @@
         {{#if numberReports service}}
           <i class="mdi-device-access-time red-text"></i>
         {{/if}}
-        {{#unless numberReports}}
           <i class="mdi-navigation-chevron-right black-text"></i>
-        {{/unless}}
         </span></a>
       </div>
     {{/each}}
