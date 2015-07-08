@@ -9,11 +9,11 @@ Please create a GitHub issue if you have an idea. And if you're able to code a s
 
 ## Deployment
 
+*Note: there is a missing step somewhere... hopefully we will resolve this soon*
+
 Both SEPTA Ninja and MBTA Ninja are deplyed on [Heroku](http://heroku.com). Here's a quick guide to getting it up and running so you don't have to suffer too muh to get it set up. If you dont have a heroku account, make one becore you start.
 
 ### Make a heroku app
-
-*Note: there is a missing step somewhere... hopefully we will resolve this soon*
 
 In order to get up and running on Heroku, you first have to make a heroku app. We'll clone this repo as the example which you can modify. 
 
