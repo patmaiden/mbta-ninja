@@ -13,6 +13,8 @@ Both SEPTA Ninja and MBTA Ninja are deplyed on [Heroku](http://heroku.com). Here
 
 ### Make a heroku app
 
+*Note: there is a missing step somewhere... hopefully we will resolve this soon*
+
 In order to get up and running on Heroku, you first have to make a heroku app. We'll clone this repo as the example which you can modify. 
 
 First, you have to login:
