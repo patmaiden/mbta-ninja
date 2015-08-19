@@ -38,7 +38,11 @@
           </span>
             <span class="report-detail report-votes">
             <br>
+            {{#if isPatco line}}
+            <a href="http://twitter.com/intent/tweet?screen_name=RIDEPATCO&amp;text=@septa_ninja Issue:{{ name }} at {{ location }}">Tweet this problem to PATCO</a>
+            {{else}}
             <a href="http://twitter.com/intent/tweet?screen_name=septa_social&amp;text=@septa_ninja Issue:{{ name }} at {{ location }}">Tweet this problem to SEPTA</a>
+            {{/if}}
           </span>
         {{/unless}}
       </div>
