@@ -15,6 +15,9 @@ Template.report.helpers({
   },
   serviceIssue: function(reportType) {
     return (reportType === 'service');
+  },
+  isPatco: function (line) {
+    return line.substring(0, 5) === "PATCO";
   }
 });
 
